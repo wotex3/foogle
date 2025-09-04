@@ -1,0 +1,364 @@
+* {
+   margin: 0;
+   padding: 0;
+   outline: none;
+   border: none;
+   font-family: Arial, sans-serif;
+   user-select: none !important;
+}
+
+/* Här har  jag googles official logo font */
+@font-face {
+   font-family: "Product";
+   src: url(./productsans.ttf);
+}
+
+/* Här lägger jag kod för att stänga overflow scrollbars för att om jag lägger en till history-element så vi kommer sä default google scrollbar */
+*::-webkit-scrollbar-track {
+   width: 0rem;
+}
+
+*::-webkit-scrollbar {
+   width: 0rem;
+}
+
+*::-webkit-scrollbar-thumb {
+   background-color: transparent;
+}
+
+/* Här använder jag root liksom variable för darkmode/lightmode switch */
+:root {
+  --bg: #000;
+  --searchbar: #FFFFFF;
+  --searchbarplaceholder: #585a5de3;
+  --logocolor: #fff;
+  --historyelementhover: #3b3a3aba;
+  --checkboxwrapper: #3b3a3a89;
+  --historyimagewrapper: #3F484A;
+  --checkboxcolor: #fff;
+}
+
+:root.light {
+   --bg: #FFFFFF;
+   --searchbar: #FFFFFF;
+   --searchbarplaceholder: #585a5de3;
+   --logocolor: #000;
+   --historyelementhover: #E8E8E9;   
+   --checkboxwrapper: #F2F2F2;
+   --historyimagewrapper: #E1E3E1;
+   --checkboxcolor: #000;
+}
+
+/* Man använder var för att få den variablen som gäller */
+body {
+   background-color: var(--bg) !important;
+}
+
+header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 10vh;
+}
+
+.profile {
+   position: absolute;
+   top: 50%;
+   transform: translate(-0%, -50%);
+   right: 1.3vw;
+   background-color: #F4511E;
+   width: 2.25vw;
+   height: 2.25vw;
+   border-radius: 50%;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.1vw;
+   font-weight: 500;
+}
+
+.nineDots {
+   position: absolute;
+   top: 50%;
+   right: 4.9vw;
+   transform: translate(-0%, -50%);
+   font-size: 1.6vw;
+   color: var(--logocolor);   
+}
+
+.profileHrefs {
+   position: absolute;
+   top: 50%;
+   right: 7.9vw;
+   transform: translate(-0%, -50%);
+   width: 5.5vw;
+   height: 22%;
+   display: flex;
+   justify-content: space-between;
+   justify-items: center;
+}
+
+.profileHrefs>a {
+   color: var(--logocolor);   
+   font-size: 0.85vw;
+   outline: none !important;
+}
+
+.opacityLow {
+   cursor: pointer;
+   transition: all ease-in 95ms;
+}
+
+.opacityLow:hover {
+   opacity: 65%;
+}
+
+.logo {
+   position: absolute;
+   top: 25%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: var(--logocolor);
+   font-family: "Product" !important;
+   font-size: 5.1vw;
+   letter-spacing: 0.4px;
+   transition: all ease-in 95ms;
+}
+
+.inputWrapper {
+   position: absolute;
+   top: 42%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 46%;
+   height: 6.7vh;
+   border-radius: 25px;
+   background-color: var(--searchbar);
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.magnyGlass {
+   position: absolute;
+   top: 50%;
+   left: 1.05vw;
+   transform: translate(0, -50%);
+   color: var(--searchbarplaceholder);
+   font-size: 1vw;
+}
+
+.search {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: transparent;
+   width: 81%;
+   height: 100%;
+   border: none;
+   font-size: 1vw;
+   padding-left: 3vw;
+   padding-right: 3vw;
+}
+
+.search::placeholder {
+   color: var(--searchbarplaceholder);
+   font-weight: 500;
+}
+
+.inputWrapper-iconsWrapper {
+   position: absolute;
+   top: 50%;
+   right: 1vw;
+   transform: translate(-0%, -50%);
+   width: 3.6vw;
+   height: 52%;
+   display: flex;
+   justify-content: space-between;
+   justify-items: center;
+}
+
+.inputWrapper-iconsWrapper>img {
+   width: 1.4vw;
+   height: 1.4vw;
+} 
+
+.history {
+   position: absolute;
+   top: 64%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 75.2%;
+   height: 30vh;
+   overflow-y: auto;
+}
+
+.history-element {
+   position: relative;
+   top: 0;
+   left: 0;
+   float: left;
+   width: 6.5vw;
+   height: 14.5vh;
+   margin: 0.3vw;
+   border-radius: 2px;
+   transition: all ease-in 95ms;
+}
+
+.history-element:hover {
+   background-color: var(--historyelementhover);
+}
+
+.history-element-imageWrapper {
+   position: absolute;
+   top: 1.6vh;
+   left: 50%;
+   transform: translate(-50%);
+   width: 3vw;
+   height: 3vw;
+   border-radius: 50%;
+   background-color: var(--historyimagewrapper);
+}
+
+.history-element-imageWrapper>img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 1.55vw;
+   border-radius: 2px;
+}
+
+.history-element>span {
+   position: absolute;
+   top: 9.9vh;
+   left: 50%;
+   transform: translate(-50%);
+   width: max-content;
+   color: var(--logocolor);
+   font-size: 0.83vw;
+}
+
+/* Här har jag olycka tags för att skapa den färgade google logon */
+forsta {
+   color: #4889F4 !important;
+   font-family: "Product" !important;
+}
+
+andra {
+   color: #EB493B !important;
+   font-family: "Product" !important;
+}
+
+tredje {
+   color: #FBBE0D !important;
+   font-family: "Product" !important;
+}
+
+femte {
+   color: #3AAB58 !important;
+   font-family: "Product" !important;
+}
+
+/* Här har vi logiken för 2 olycka logo typer */
+.logo { display: none; }
+.logo.normal { display: block; }
+
+#toggleLogo:checked ~ .logo-wrapper .normal {
+  display: none;
+}
+#toggleLogo:checked ~ .logo-wrapper .colorized {
+  display: block;
+}
+
+.checkbox-wrapper {
+   position: absolute;
+   bottom: 3vh;
+   right: 4vw;
+   width: 8vw;
+   height: 12.4vh;
+   background: var(--checkboxwrapper);
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 0.8vw;
+   padding-bottom: 0;
+   padding-top: 0;
+   border-radius: 2px;
+}
+
+.checkbox-wrapper-element {
+   position: relative;
+   width: 100%;
+   height: 6vh;
+   margin-bottom: 0.2vh;
+}
+
+.checkbox-wrapper-element>span {
+   position: absolute;
+   top: 50%;
+   left: 0.1vw;
+   transform: translate(0, -50%);
+   font-size: 1vw;
+   color: var(--logocolor);
+}
+
+.checkbox-wrapper-element>input {
+   position: absolute;
+   top: 50%;
+   right: 0.1vw;
+   transform: translate(0, -50%);
+   font-size: 1vw;
+   color: var(--logocolor);
+}
+
+/* Här har jag tagit mina gamla checkbox design för den är snygg och passar googles tema */
+
+input[type="checkbox"].switch_1 {
+   font-size: 30px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   width: 3.8vw;
+   height: 3.6vh;
+   background: transparent;
+   border: 1px solid #979797;
+   border-radius: 3em;
+   cursor: pointer;
+   outline: none;
+   transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"].switch_1:hover {
+   opacity: 0.7;
+}
+
+input[type="checkbox"].switch_1:checked {
+   border-color: var(--checkboxcolor);
+}
+
+input[type="checkbox"].switch_1:after {
+   position: absolute;
+   content: "";
+   top: 0.3px;
+   width: 1.4vw;
+   height: 1.4vw;
+   border-radius: 50%;
+   background: #979797;
+   box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+   -webkit-transform: scale(.9);
+   transform: scale(.7);
+   /* left: -6vw; */
+   -webkit-transition: all .2s ease-in-out;
+   transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"].switch_1:checked:after {
+   background-color: var(--checkboxcolor);
+}
+
+input[type="checkbox"].switch_1:checked:after {
+   left: calc(100% - 0.7rem);
+}
+
+input[type="checkbox"].switch_1:after {
+   left: calc(100% - 1.7rem);
+}

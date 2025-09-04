@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+   <title>Google</title>
+</head>
+
+<body>
+   <!-- Här har jag skapat en divider med header tag för att positionera profil, och några ikoner -->
+   <header> 
+      <div class="profile">E</div>
+      <svg class="nineDots" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M76,60A16,16,0,1,1,60,44,16,16,0,0,1,76,60Zm52-16a16,16,0,1,0,16,16A16,16,0,0,0,128,44Zm68,32a16,16,0,1,0-16-16A16,16,0,0,0,196,76ZM60,112a16,16,0,1,0,16,16A16,16,0,0,0,60,112Zm68,0a16,16,0,1,0,16,16A16,16,0,0,0,128,112Zm68,0a16,16,0,1,0,16,16A16,16,0,0,0,196,112ZM60,180a16,16,0,1,0,16,16A16,16,0,0,0,60,180Zm68,0a16,16,0,1,0,16,16A16,16,0,0,0,128,180Zm68,0a16,16,0,1,0,16,16A16,16,0,0,0,196,180Z"></path></svg>
+      <div class="profileHrefs">
+         <a class="opacityLow">Gmail</a>
+         <a class="opacityLow">Bilder</a>
+      </div>
+   </header>
+   <!-- Här skapa jag en ny divider med div för 2 input och checkbox kominbation för att göra det enklare positionera -->
+   <div class="checkbox-wrapper">
+      <div class="checkbox-wrapper-element">
+         <span>Logo</span>
+         <input type="checkbox" class="switch_1" id="toggleLogo">
+      </div>
+      <div class="checkbox-wrapper-element">
+         <span>Mode</span>
+         <input type="checkbox" class="switch_1" id="toggleMode">
+      </div>
+   </div>
+
+   <!-- Här har jag 2 logo en är färgade och den andra är normalt. i default så jag stänger colorized taggen från css och uppdaterar det javascript delen -->
+   <h1 class="logo normal">Google</h1>
+   <h1 class="logo colorized"><forsta>G</forsta><andra>o</andra><tredje>o</tredje><forsta>g</forsta><femte>l</femte><andra>e</andra></h1>
+   <!-- Här har jag en input wrapper där ligger mina ikoner och input för search bar. Jag har gjort det för att positionera perfekt dessa ikoner i min serach bar -->
+   <div class="inputWrapper">
+      <svg class="magnyGlass" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+      <input class="search" type="text" placeholder="Sök på Google eller skriv en webbadress">
+      <!-- Här har jag icons wrapper för att positionera 2 ikoner brevid varandra längst höger på jämnt sätt -->
+      <div class="inputWrapper-iconsWrapper"> 
+         <img src="./mic.svg" alt="">
+         <img src="./camera.svg" alt="">
+      </div>
+   </div>
+   <!-- Här hag jag parent divven -->
+   <div class="history">
+      <!-- Olycka history element divs som representerar olycka appar -->
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://play-lh.googleusercontent.com/AlvcD6_SdgXA1Viz2OLswUKl2aJdepsoZHUqLt1pBuH0WbTu5o_UlNiAT-hTUFyhC6E">
+         </div>
+         <span>Schoolsoft</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Youtube_Music_icon.svg/1200px-Youtube_Music_icon.svg.png">
+         </div>
+         <span>Youtube Music</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png">
+         </div>
+         <span>Google</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://static.vecteezy.com/system/resources/previews/024/558/807/non_2x/openai-chatgpt-logo-icon-free-png.png">
+         </div>
+         <span>Chatgpt</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://as2.ftcdn.net/jpg/02/50/30/59/1000_F_250305943_sDC6la1N1fDl3bLgfLxOkQwItIodsdMb.jpg">
+         </div>
+         <span>Github</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4W0-BI5CUx35ovhgfEqbeDo9obGXOMgEtg&s">
+         </div>
+         <span>Discord</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_hybrid&w=740&q=80">
+         </div>
+         <span>X</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://static.vecteezy.com/system/resources/previews/027/127/473/non_2x/microsoft-logo-microsoft-icon-transparent-free-png.png">
+         </div>
+         <span>Office</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/1200px-Google_Classroom_Logo.svg.png">
+         </div>
+         <span>Classroom</span>
+      </div>
+      <div class="history-element opacityLow">
+         <div class="history-element-imageWrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png">
+         </div>
+         <span>Gmail</span>
+      </div>
+   </div>
+
+   <script>
+      // Här har jag först använd variabler för clean code
+      const toggleLogo = document.getElementById("toggleLogo");
+      const toggleMode = document.getElementById("toggleMode");
+      const normal = document.querySelector(".logo.normal");
+      const colorized = document.querySelector(".logo.colorized");
+
+      // Här kontrolerar jag om logon är redan checkad så jag stänger normala och öppnar färgade logon annars blir det tvärtom
+      toggleLogo.addEventListener("change", () => {
+         if (toggleLogo.checked) {
+            normal.style.display = "none";
+            colorized.style.display = "block";
+         } else {
+            normal.style.display = "block";
+            colorized.style.display = "none";
+         }
+      });
+      
+      // Samma logik men det är för light/dark mode switch
+      toggleMode.addEventListener("change", () => {
+         if (toggleMode.checked) {
+            document.documentElement.classList.add("light");  
+         } else {
+            document.documentElement.classList.remove("light");
+         }
+      });
+    </script>
+</body>
